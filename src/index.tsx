@@ -1,16 +1,21 @@
-import * as React from 'react'
-import './styles.module.scss'
+import * as React from 'react';
+import './styles.module.scss';
 
 interface Props {
   inputElements: {
-    placeholder: string
-  }[]
+    placeholder: string;
+    value?: string;
+  }[];
+  formStyle?: object;
 }
 
+const x = 5;
+console.log(x);
+
 export const FormMapper = (props: Props) => {
-  const { inputElements } = props
+  const { inputElements, formStyle } = props;
   return (
-    <form className='form'>
+    <form className='form' style={formStyle}>
       {inputElements.map((element) => (
         <input
           className='form_element'
@@ -19,5 +24,5 @@ export const FormMapper = (props: Props) => {
         />
       ))}
     </form>
-  )
-}
+  );
+};
