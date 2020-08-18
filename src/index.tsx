@@ -1,10 +1,23 @@
 import * as React from 'react'
-import styles from './styles.module.css'
+import './styles.module.scss'
 
 interface Props {
-  text: string
+  inputElements: {
+    placeholder: string
+  }[]
 }
 
-export const ExampleComponent = ({ text }: Props) => {
-  return <div className={styles.test}>Example Component: {text}</div>
+export const FormMapper = (props: Props) => {
+  const { inputElements } = props
+  return (
+    <form className='form'>
+      {inputElements.map((element) => (
+        <input
+          className='form_element'
+          key={element.placeholder}
+          placeholder={element.placeholder}
+        />
+      ))}
+    </form>
+  )
 }

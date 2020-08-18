@@ -1,10 +1,18 @@
 import React from 'react'
 
-import { ExampleComponent } from 'react-fortress'
+import { FormMapper } from 'react-fortress'
 import 'react-fortress/dist/index.css'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return (
+    <FormMapper
+      inputElements={[
+        { placeholder: 'Full name...' },
+        { placeholder: 'Email' },
+        { placeholder: 'Password' }
+      ]}
+    />
+  )
 }
 
 export default App
