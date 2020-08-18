@@ -13,14 +13,14 @@ npm install --save react-fortress
 ## Usage
 
 ```tsx
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-import MyComponent from 'react-fortress'
-import 'react-fortress/dist/index.css'
+import { FormMapper } from 'react-fortress';
+import 'react-fortress/dist/index.css';
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return <FormMapper />;
   }
 }
 ```
